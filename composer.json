@@ -1,0 +1,33 @@
+{
+    "name": "lukas/ipresence_test",
+    "description": "Backend test",
+    "type": "project",
+    "require": {
+        "slim/slim": "^4.5",
+        "psr/http-client": "^1.0",
+        "slim/http-cache": "^1.0",
+        "slim/psr7": "^1.1",
+        "phpunit/phpunit": "^9.2",
+        "pimple/pimple": "^3.3",
+        "php-di/slim-bridge": "^3.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "predis/predis": "^1.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lukasz Kozik",
+            "email": "lukasz.kozik@asenti.pl"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "Ipresence\\": "src/",
+          "Tests\\": "tests/"
+        }
+      },
+    "config": {
+        "vendor-dir": "vendor",
+        "bin-dir": "bin"
+    }
+}

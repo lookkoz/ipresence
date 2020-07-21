@@ -1,0 +1,19 @@
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         verbose="false"
+
+         bootstrap="../../vendor/autoload.php">
+
+    <testsuites>
+        <testsuite name="iprecense">
+            <directory>.</directory>
+        </testsuite>
+    </testsuites>
+
+</phpunit>

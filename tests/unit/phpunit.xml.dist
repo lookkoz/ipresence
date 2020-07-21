@@ -1,0 +1,44 @@
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         verbose="false"
+
+         bootstrap="../../vendor/autoload.php">
+
+    <groups>
+        <exclude>
+            <group>skip</group>
+        </exclude>
+    </groups>
+
+    <testsuites>
+        <testsuite name="iprecense">
+            <directory>Domain</directory>
+            <directory>App</directory>
+            <directory>Root</directory>
+        </testsuite>
+    </testsuites>
+
+
+    <filter>
+        <whitelist addUncoveredFilesFromWhitelist="true" processUncoveredFilesFromWhitelist="true">
+            <directory>../../src/</directory>
+            <exclude>
+                <file>../../src/init.php</file>
+                <directory>../../src/Root</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-text" target="php://stdout" showUncoveredFiles="true" highLowerBound="10"  />
+<!--
+        <log type="coverage-clover" target="/tmp/coverage.xml" highLowerBound="10" />
+-->
+    </logging>
+
+</phpunit>
